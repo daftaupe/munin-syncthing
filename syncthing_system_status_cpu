@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case $1 in
+   config)
+        cat <<'EOM'
+graph_title Syncthing cpu usage
+graph_vlabel %
+graph_category syncthing
+syncthing_system_status_cpu.label cpu
+EOM
+        exit 0;;
+esac
+
+printf "syncthing_system_status_cpu.value "
+curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '. | {cpu: .cpuPercent}' | grep cpu | cut -d' ' -f 4
