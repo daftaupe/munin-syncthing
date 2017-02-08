@@ -11,7 +11,6 @@ graph_vlabel bits
 syncthing_system_status_mem_all.label allocated
 syncthing_system_status_mem_all.cdef syncthing_system_status_mem_all,8,*
 syncthing_system_status_mem_sys.label obtained
-syncthing_system_status_mem_sys.negative syncthing_system_status_mem_sys
 syncthing_system_status_mem_sys.cdef syncthing_system_status_mem_sys,8,*
 EOM
         exit 0;;
