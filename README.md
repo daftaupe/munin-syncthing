@@ -1,5 +1,5 @@
 # munin-plugins-syncthing
-Munin plugins to monitor Syncthing
+Munin plugins to monitor [Syncthing](https://syncthing.net/)
 
 ## Requirements
 * [jq](https://stedolan.github.io/jq/)
