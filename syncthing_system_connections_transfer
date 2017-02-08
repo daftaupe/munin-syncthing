@@ -5,22 +5,22 @@ case $1 in
         cat <<'EOM'
 graph_title Syncthing total transfer 
 graph_category syncthing
-graph_order syncthing_connections_transfer_down syncthing_connections_transfer_up
+graph_order syncthing_system_connections_transfer_down syncthing_system_connections_transfer_up
 graph_args --base 1000
 graph_vlabel bits in (-) / out (+) per ${graph_period}
-syncthing_connections_transfer_down.label received
-syncthing_connections_transfer_down.type COUNTER
-syncthing_connections_transfer_down.graph no
-syncthing_connections_transfer_down.cdef syncthing_connections_transfer_down,8,*
-syncthing_connections_transfer_up.label bps
-syncthing_connections_transfer_up.type COUNTER
-syncthing_connections_transfer_up.negative syncthing_connections_transfer_down
-syncthing_connections_transfer_up.cdef syncthing_connections_transfer_up,8,*
+syncthing_system_connections_transfer_down.label received
+syncthing_system_connections_transfer_down.type COUNTER
+syncthing_system_connections_transfer_down.graph no
+syncthing_system_connections_transfer_down.cdef syncthing_system_connections_transfer_down,8,*
+syncthing_system_connections_transfer_up.label bps
+syncthing_system_connections_transfer_up.type COUNTER
+syncthing_system_connections_transfer_up.negative syncthing_system_connections_transfer_down
+syncthing_system_connections_transfer_up.cdef syncthing_system_connections_transfer_up,8,*
 EOM
         exit 0;;
 esac
 
 IBT=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/connections | jq '.total | {in: .inBytesTotal}' | grep in | cut -d' ' -f 4)
 OBT=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/connections | jq '.total | {out: .outBytesTotal}' | grep out | cut -d' ' -f 4)
-printf "syncthing_connections_transfer_up.value $IBT\nsyncthing_connections_transfer_down.value $OBT\n"
+printf "syncthing_system_connections_transfer_up.value $IBT\nsyncthing_system_connections_transfer_down.value $OBT\n"
 
