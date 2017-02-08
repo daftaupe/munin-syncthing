@@ -20,8 +20,8 @@ Like all munin plugins, you have to create a symbolic link in your Munin plugin 
 For example suppose you have downloaded the plugins in /usr/share/munin/plugins (with the default ones provided by Munin) you should run the following commands.
 
 ~~~bash
-# cd /etc/munin/plugins
-# ln -s /usr/share/munin/plugins/syncthing_system_status_uptime  /etc/munin/plugins
+# cd /usr/share/munin/plugins && git clone https://github.com/daftaupe/munin-plugins-syncthing.git
+# cd /etc/munin/plugins && ln -s /usr/share/munin/plugins/munin-plugins-syncthing/syncthing_system_status_uptime
 ~~~
 
 ## Configuration
