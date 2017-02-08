@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case $1 in
+   config)
+        cat <<'EOM'
+graph_title Syncthing memory
+graph_category syncthing
+graph_order syncthing_system_status_mem_all syncthing_system_status_mem_sys
+graph_args --base 1000
+graph_vlabel bits 
+syncthing_system_status_mem_all.label allocated
+syncthing_system_status_mem_all.cdef syncthing_system_status_mem_all,8,*
+syncthing_system_status_mem_sys.label obtained
+syncthing_system_status_mem_sys.negative syncthing_system_status_mem_sys
+syncthing_system_status_mem_sys.cdef syncthing_system_status_mem_sys,8,*
+EOM
+        exit 0;;
+esac
+
+ALL=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '. | {all: .alloc}' | grep all | cut -d' ' -f 4)
+SYS=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '. | {sys: .sys}' | grep sys | cut -d' ' -f 4)
+printf "syncthing_system_status_mem_all.value $ALL\nsyncthing_system_status_mem_sys.value $SYS\n"
+
