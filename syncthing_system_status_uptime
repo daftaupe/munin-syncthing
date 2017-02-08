@@ -11,4 +11,4 @@ EOM
 esac
 
 printf "syncthing_system_status_uptime.value "
-curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '. | {uptime: .uptime}' | grep uptime | cut -d' ' -f 4
+curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '.uptime' 

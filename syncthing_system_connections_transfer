@@ -20,7 +20,7 @@ EOM
         exit 0;;
 esac
 
-IBT=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/connections | jq '.total | {in: .inBytesTotal}' | grep in | cut -d' ' -f 4)
-OBT=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/connections | jq '.total | {out: .outBytesTotal}' | grep out | cut -d' ' -f 4)
+IBT=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/connections | jq '.total | .inBytesTotal')
+OBT=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/connections | jq '.total | .outBytesTotal')
 printf "syncthing_system_connections_transfer_up.value $IBT\nsyncthing_system_connections_transfer_down.value $OBT\n"
 
