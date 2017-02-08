@@ -16,7 +16,7 @@ EOM
         exit 0;;
 esac
 
-ALL=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '.alloc')
-SYS=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" http://$ST_HOST:$ST_PORT/rest/system/status | jq '.sys')
+ALL=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" $ST_PROTO://$ST_HOST:$ST_PORT/rest/system/status | jq '.alloc')
+SYS=$(curl -s -X GET -H "X-API-Key: $ST_APIKEY" $ST_PROTO://$ST_HOST:$ST_PORT/rest/system/status | jq '.sys')
 printf "syncthing_system_status_mem_all.value $ALL\nsyncthing_system_status_mem_sys.value $SYS\n"
 
