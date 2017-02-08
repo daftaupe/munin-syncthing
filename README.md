@@ -19,4 +19,5 @@ You need to configure a file in /etc/munin/plugin-conf.d/, it should contain the
 env.ST_APIKEY abcdefgh12345678
 env.ST_HOST 127.0.0.1
 env.ST_PORT 8384
+env.ST_PROTO http
 ~~~
