@@ -38,3 +38,10 @@ env.ST_PROTO http
 ~~~
 
 The APKIKEY is found in the configuration panel of Syncthing web interface.
+
+## Preview
+![cpu](https://cloud.githubusercontent.com/assets/22810624/22884513/95fb62e6-f1f5-11e6-8215-f7e601ba92dd.png)
+![go](https://cloud.githubusercontent.com/assets/22810624/22884515/95fcb7cc-f1f5-11e6-913e-93761d4e0e05.png)
+![mem](https://cloud.githubusercontent.com/assets/22810624/22884514/95fb77c2-f1f5-11e6-9d99-352a47bf102b.png)
+![transf](https://cloud.githubusercontent.com/assets/22810624/22884512/95f9cde6-f1f5-11e6-892c-d98c079e57d0.png)
+![up](https://cloud.githubusercontent.com/assets/22810624/22884511/95f92d5a-f1f5-11e6-9bcc-2c89a7aee4c4.png)
