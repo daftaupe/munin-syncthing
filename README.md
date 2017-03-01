@@ -5,7 +5,7 @@
 * [jq](https://stedolan.github.io/jq/)
 * Munin already setup and running
 * Syncthing already setup and running
-* Munin relay setup and running
+* Syncthing relay setup and running
 
 ## Available plugins
 ~~~bash
