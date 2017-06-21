@@ -4,7 +4,7 @@ case $1 in
    config)
         cat <<'EOM'
 graph_title Syncthing relay numbers
-graph_category syncthing
+graph_category network
 graph_vlabel numbers
 strelaysrv_status_num_sessions.label sessions
 strelaysrv_status_num_connections.label connections

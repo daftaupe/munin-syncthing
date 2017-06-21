@@ -5,7 +5,7 @@ case $1 in
         cat <<'EOM'
 graph_title Syncthing cpu usage
 graph_vlabel %
-graph_category syncthing
+graph_category network
 syncthing_system_status_cpu.label cpu
 EOM
         exit 0;;

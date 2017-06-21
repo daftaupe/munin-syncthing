@@ -4,7 +4,7 @@ case $1 in
    config)
         cat <<'EOM'
 graph_title Syncthing total transfer 
-graph_category syncthing
+graph_category network
 graph_order syncthing_system_connections_transfer_down syncthing_system_connections_transfer_up
 graph_args --base 1000
 graph_vlabel bits in (-) / out (+) per ${graph_period}

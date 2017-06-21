@@ -5,7 +5,7 @@ case $1 in
         cat <<'EOM'
 graph_title Syncthing uptime
 graph_vlabel uptime in seconds
-graph_category syncthing
+graph_category network
 syncthing_system_status_uptime.label uptime
 EOM
         exit 0;;

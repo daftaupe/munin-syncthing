@@ -4,7 +4,7 @@ case $1 in
    config)
         cat <<'EOM'
 graph_title Syncthing memory
-graph_category syncthing
+graph_category network
 graph_order syncthing_system_status_mem_all syncthing_system_status_mem_sys
 graph_args --base 1000
 graph_vlabel bits 
