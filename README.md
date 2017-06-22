@@ -10,11 +10,11 @@
 ## Available plugins
 ~~~bash
 # Syncthing
-syncthing_system_connections_transfer # graph the total in/out bits 
-syncthing_system_status_cpu           # graph the cpu percentage used
-syncthing_system_status_gor           # graph the number of go routines used
-syncthing_system_status_mem           # graph the amount of memory allocated and obtained from the system
-syncthing_system_status_uptime        # graph the uptime
+syncthing_transfer      # graph the total in/out bits 
+syncthing_cpu           # graph the cpu percentage used
+syncthing_goroutine     # graph the number of go routines used
+syncthing_mem           # graph the amount of memory allocated and obtained from the system
+syncthing_uptime        # graph the uptime
 ~~~
 ~~~bash
 # Syncthing relay server
@@ -31,7 +31,7 @@ For example suppose you have downloaded the plugins in /usr/share/munin/plugins 
 ~~~bash
 # installation of the uptime plugin
 # cd /usr/share/munin/plugins && git clone https://github.com/daftaupe/munin-plugins-syncthing.git
-# cd /etc/munin/plugins && ln -s /usr/share/munin/plugins/munin-plugins-syncthing/syncthing_system_status_uptime
+# cd /etc/munin/plugins && ln -s /usr/share/munin/plugins/munin-plugins-syncthing/syncthing_ syncthing_uptime
 ~~~
 
 ## Configuration
