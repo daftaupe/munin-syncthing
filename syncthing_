@@ -5,6 +5,7 @@ function cpu {
         config)
             cat <<'EOM'
 graph_title Syncthing cpu usage
+graph_args -u 100
 graph_vlabel %
 graph_category network
 syncthing_cpu.label cpu
