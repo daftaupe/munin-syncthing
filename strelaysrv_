@@ -1,4 +1,33 @@
 #!/bin/sh
+: <<=cut
+=head1 NAME
+strelaysrv_ - Plugin to monitor Syncthing relay server
+
+=head1 DESCRIPTION
+This plugin gathers metrics from a Syncthing relay server.
+
+This plugin requires the jq utility : https://stedolan.github.io/jq/
+
+Available plugins :
+strelaysrv_goroutine #
+strelaysrv_num       # 
+strelaysrv_transfer  #
+strelaysrv_uptime    #
+
+=head1 CONFIGURATION
+To make the plugin connect to the Syncthing relay server one has to use this type of 
+configuration
+[strelaysrv_*]
+
+env.STR_HOST 127.0.0.1
+env.STR_PORT 22070
+
+=head1 AUTHOR
+Pierre-Alain TORET <pierre-alain.toret@protonmail.com>
+
+=head1 LICENSE
+MIT
+=cut
 
 function num {
     case $1 in
