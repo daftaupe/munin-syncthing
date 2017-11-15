@@ -18,10 +18,10 @@ syncthing_uptime        # graph the uptime
 ~~~
 ~~~bash
 # Syncthing relay server
-strelaysrv_status_gor                 # graph the number of go routines used
-strelaysrv_status_num                 # graph the stats provided by the relay
-strelaysrv_status_transfer            # graph the relay transfer rate of the last 5 mins
-strelaysrv_status_uptime              # graph the relay uptime
+strelaysrv_goroutine    # graph the number of go routines used
+strelaysrv_num          # graph the stats provided by the relay
+strelaysrv_transfer     # graph the relay transfer rate of the last 5 mins
+strelaysrv_uptime       # graph the relay uptime
 ~~~
 
 ## Installation
