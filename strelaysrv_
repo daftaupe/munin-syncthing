@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 : <<=cut
 =head1 NAME
 strelaysrv_ - Plugin to monitor Syncthing relay server
