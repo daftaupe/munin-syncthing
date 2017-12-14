@@ -112,7 +112,7 @@ graph_category network
 graph_vlabel bps
 graph_args --base 1000
 strelaysrv_transfer.label bps
-strelaysrv_transfer.cdef strelaysrv_transfer,8000,*
+strelaysrv_transfer.cdef strelaysrv_transfer,1000,*
 EOM
             exit 0;;
 	*)
