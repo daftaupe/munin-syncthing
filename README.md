@@ -20,6 +20,7 @@ syncthing_uptime        # graph the uptime
 # Syncthing relay server
 strelaysrv_goroutine    # graph the number of go routines used
 strelaysrv_num          # graph the stats provided by the relay
+strelaysrv_proxied      # graph the relay total proxied bits
 strelaysrv_transfer     # graph the relay transfer rate of the last 5 mins
 strelaysrv_uptime       # graph the relay uptime
 ~~~
