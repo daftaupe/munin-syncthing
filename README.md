@@ -43,10 +43,10 @@ Modify the following to fit your Syncthing instance.
 # Syncthing
 [syncthing_*]
 
-env.ST_APIKEY abcdefgh12345678
-env.ST_HOST 127.0.0.1
-env.ST_PORT 8384
-env.ST_PROTO http
+env.syncthing_apikey myapikey0123456789
+env.syncthing_host 127.0.0.1
+env.syncthing_port 8384
+env.syncthing_proto http
 ~~~
 The APKIKEY is found in the configuration panel of Syncthing web interface. 
 
@@ -55,8 +55,8 @@ Create /etc/munin/plugin-conf.d/strelaysrv. Adapt it to your own case.
 #Syncthing relay
 [strelaysrv_*]
 
-env.STR_HOST 1.2.3.4
-env.STR_PORT 22070
+env.syncthing_relaysrv_host 127.0.0.1
+env.syncthing_relaysrv_port 22070
 ~~~
 The APIKEY is not needed for the Syncthing relay monitoring, the /status is publicly available.
 You can enable it with the -status-srv flag when starting strelaysrv.
